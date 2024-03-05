@@ -1,0 +1,110 @@
+﻿@using web_veri_proje.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <a href="~/Views/Default/Index.cshtml"></a>
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:530px;height:330px">@*650,365*@
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                <li><img src="@x.BlogImage" alt=""></li>
+                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
+                                <li><img src="~/web/images/img3.jpg" alt=""></li>
+                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz!</h3>
+                    <p>
+                        Tatil Seyahat Bloğu, 
+                        seyahat tutkunlarının ruhunu besleyen bir platform. 
+                        Eşsiz manzaraların, kültürlerin ve deneyimlerin izlerini sürmek için tasarlandı. 
+                        Her yazı, yeni bir maceranın kapısını aralıyor; muhteşem manzaralar, gizli kalmış tatlar ve unutulmaz anılarla dolu.
+                        Burada, dünyanın dört bir yanındaki keşiflerinizi paylaşacak ve yeni rotalar keşfetmeniz için sizi motive edecek bir yolculuğa çıkacaksınız. 
+                        Tutku dolu gezginler için birlikte keşfetmenin heyecanını yaşayalım!
+                    </p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
